@@ -1,0 +1,15 @@
+<ion-view title="Simple ToDo App" id="page1">
+    <ion-content padding="true" class="has-header">
+        <a ui-sref="create" id="simpleToDoApp-button3" class="button button-energized  button-block">Create!</a>
+        <!-- foreach loop read through task -->
+        <ion-list ng-repeat="task in $storage.tasks">
+        <!-- passing task id to route -->
+            <ion-item ui-sref="details({id: task.id})">
+
+            	{{ task.name }}
+				<a ng-click="removeTask(task)" class="button button-positive">Delete</a>
+
+        	</ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

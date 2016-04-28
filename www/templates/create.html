@@ -1,0 +1,25 @@
+<ion-view title="Create" id="page2">
+    <ion-content padding="true" class="has-header">
+        <div class="list card">
+            <div class="item item-divider">New Item</div>
+            <div class="item item-body">
+                <form class="list">
+                    <label class="item item-input">
+                        <span class="input-label">Name</span>
+
+                        <!-- ng-model: bind element with model -->
+                        <input type="text" placeholder="Your task name" ng-model="$parent.name" name="name">
+                    </label>
+                    
+                    <label class="item item-input">
+                        <span class="input-label">Description</span>
+                        <textarea rows="4" placeholder="of Task" ng-model="$parent.description" name="description"> </textarea>
+                    </label>
+
+                    <!-- ng-click: call function defined in $scope -->
+                    <a ui-sref="simpleToDoApp" ng-click="save()" id="create-button2" class="button button-positive  button-block">Save!</a>
+                </form>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

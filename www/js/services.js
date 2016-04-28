@@ -1,0 +1,27 @@
+angular.module('app.services', [])
+
+.service('TaskService', function($localStorage) {
+	return {
+			getTaskById : function(id) {
+					return $localStorage.tasks.reduce(function(carry, task){
+						if(task.id == id)
+							carry = task;
+						return carry;
+					}, {});
+			},
+			search : function(keyword) {
+				
+			},
+			save : function(params){},
+			update: function(params){}
+	}
+})
+
+.factory('BlankFactory', [function(){
+
+}])
+
+.service('BlankService', [function(){
+
+}]);
+
